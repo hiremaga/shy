@@ -1,4 +1,4 @@
-# Shy
+# Shy [![Build Status](https://travis-ci.org/hiremaga/shy.png)](https://travis-ci.org/hiremaga/shy) [![Code Climate](https://codeclimate.com/github/hiremaga/shy.png)](https://codeclimate.com/github/hiremaga/shy)
 
 A `Shy` is like a `Struct`, but `private` and instantiated with a `Hash`
 
