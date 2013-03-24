@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "shy"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["Abhi Hiremagalur"]
   spec.email         = ["abhijit@hiremaga.com"]
   spec.description   = "A Shy is like a Struct, but private and instantiated with a Hash"
