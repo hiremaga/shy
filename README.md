@@ -20,7 +20,11 @@ Or install it yourself as:
 
 	require 'shy'
 	
-	class Shush < Shy.new(:foo, :bar)
+	class Shush
+	  include Shy
+
+	  shy :foo, :bar
+
 	  def to_s
 	    "#{foo} and #{bar}"
 	  end

@@ -1,16 +1,21 @@
 module Shy
-  def self.new(*attribute_names)
-    Class.new do
-      def initialize(attributes={})
-        attributes.each do |name, value|
-          send("#{name}=", value)
-        end
-      end
+  autoload :DSL, 'shy/dsl'
 
-      attribute_names.each do |attribute_name|
-        attr_accessor attribute_name
-        private attribute_name, "#{attribute_name}="
-      end
+  def self.included(klass)
+    klass.extend(DSL)
+  end
+
+  def self.new(*attribute_names)
+    warn 'Shy.new is deprecated, please use the Shy::DSL style instead.'
+    Class.new do
+      include Shy
+      shy *attribute_names
+    end
+  end
+
+  def initialize(attributes={})
+    attributes.each do |name, value|
+      send("#{name}=", value)
     end
   end
 end
