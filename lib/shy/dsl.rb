@@ -1,3 +1,5 @@
+# coding: utf-8
+
 module Shy
   module DSL
     def shy(*attribute_names)

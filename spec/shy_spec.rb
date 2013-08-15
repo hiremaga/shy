@@ -1,3 +1,5 @@
+# coding: utf-8
+
 require 'spec_helper'
 
 describe Shy do
@@ -23,7 +25,7 @@ describe Shy do
 
   its(:private_instance_methods) { should include(:foo, :foo=, :bar, :bar=) }
 
-  it "allows its accessors to be optionally publicized" do
+  it 'allows its accessors to be optionally publicized' do
     expect {
       subject.class_eval do
         public :foo

@@ -1,0 +1,11 @@
+AllCops:
+  Includes:
+    - Gemfile
+    - Rakefile
+    - shy.gemspec
+RegexpLiteral:
+  Enabled: false
+Documentation:
+  Enabled: false
+Blocks:
+  Enabled: false # {} for multi-line blocks in RSpec expectations is very common
